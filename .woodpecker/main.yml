@@ -1,5 +1,3 @@
-variables:
-
 pipeline:
   - name: build
     when:
