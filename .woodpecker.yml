@@ -2,6 +2,10 @@ variables:
 
 pipeline:
   - name: build
+    when:
+      - event: manual
+      - event: push
+        branch: master
     image: woodpeckerci/plugin-docker-buildx
     settings:
       dockerfile: lualot/Dockerfile
