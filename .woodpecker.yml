@@ -4,6 +4,7 @@ pipeline:
   - name: build
     when:
       - event: manual
+      - event: cron
       - event: push
         branch: master
     image: woodpeckerci/plugin-docker-buildx
