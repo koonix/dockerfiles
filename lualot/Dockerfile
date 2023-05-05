@@ -16,6 +16,6 @@ RUN luarocks install amqp-client-52plus
 RUN luarocks install telegram-bot-lua
 RUN luarocks install luatbot
 RUN luarocks install http
-RUN apt-get update && apt-get install -y libyaml sqlite3 && rm -rf /var/lib/apt/lists/*
+RUN apk add --update --no-cache yaml-dev sqlite-dev
 RUN luarocks install lyaml
 RUN luarocks install lsqlite3
